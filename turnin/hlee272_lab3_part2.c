@@ -23,6 +23,10 @@ int main(void) {
     while (1) {
 	tmpA = PINA & 0x0F;
 
+	if (tmpA == 0x00) {
+		light = 0x40;
+	}
+
 	if ((tmpA == 0x01) || (tmpA == 0x02)) {
 		light = 0x60;
 		}
